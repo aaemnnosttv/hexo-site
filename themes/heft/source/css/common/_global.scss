@@ -1,0 +1,60 @@
+
+html, body {
+    min-height: 100%;
+}
+
+html {
+    @include gradient-directional(mintcream, ivory);
+}
+body {
+    background-color: transparent;
+}
+
+img {
+    @include img-fluid;
+}
+
+#content {
+    > * {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+main {
+    a {
+        text-decoration: none !important;
+        border-bottom: 2px solid rgba($green, .35);
+        transition: border-bottom-color .5s;
+
+        &:hover {
+            border-bottom-color: rgba($red, .8);
+        }
+
+        code {
+            background-color: transparent;
+        }
+    }
+    h1, h2, h3, h4 {
+        code { background: transparent; }
+    }
+}
+
+
+blockquote {
+    @extend .blockquote;
+    color: $text-muted;
+
+    :last-child {
+        margin-bottom: 0;
+    }
+
+    #content > & {
+        max-width: 860px;
+    }
+}
+
+.nobr {
+    br { display: none; }
+}

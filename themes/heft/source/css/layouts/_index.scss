@@ -1,0 +1,15 @@
+
+main.index {
+    article {
+        margin: ($spacer-y * 2) auto;
+    }
+}
+
+.taggish {
+    font-size: 0.6em;
+    // background: rgba(205, 220, 38, 0.31);
+    background: rgba($yellow, 0.3);
+    padding: 1px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

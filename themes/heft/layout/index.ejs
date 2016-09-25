@@ -1,0 +1,25 @@
+<main id="content" class="index">
+    <div class="contained">
+
+    <% page.posts.each(function(post) { %>
+        <article class="row">
+            <div class="col-xs-4 col-sm-2">
+                <div><%- date(post.date, 'YYYY') %></div>
+                <div><%- date(post.date, 'MMMM') %></div>
+                <div><%- date(post.date, 'Do') %></div>
+            </div>
+            <div class="col-xs-8 col-sm-10">
+                <h3 class="article-title">
+                    <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+                </h3>
+
+                <ul class="list-inline post-categories">
+                <%- post.categories.map(cat => `<li class="list-inline-item taggish">${cat.name}</li>`).join('') %>
+                </ul>
+            </div>
+        </article>
+    <% }) %>
+
+    <%- partial('./_widget/paginator') %>
+    </div>
+</main>

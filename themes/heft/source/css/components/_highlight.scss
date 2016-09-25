@@ -1,0 +1,138 @@
+
+// https://github.com/chriskempson/tomorrow-theme
+//Tomorrow Night Eighties
+
+$current-line: #393939;
+$selection: #515151;
+$foreground: #ccc;
+$comment: #999;
+// $red: #f2777a;
+$orange: #f99157;
+// $yellow: #ffcc66;
+// $green: #99cc99;
+$aqua: #66cccc;
+// $blue: #6699cc;
+// $purple: #cc99cc;
+
+.highlight {
+    margin: ($spacer-y * 2) auto;
+    padding: 0.5em 0;
+
+    background: white;
+    overflow: auto;
+
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: $blue;
+
+    td {
+        vertical-align: top;
+    }
+
+    pre {
+        margin: auto;
+    }
+
+    .code {
+        vertical-align: top;
+        padding: 0 .5em;
+    }
+
+    .gutter {
+        opacity: .25;
+        padding: 0 .5em;
+
+        pre {
+            color: #666;
+            text-align: right;
+        }
+    }
+    .line {
+        line-height: 1.6em;
+        font-weight: normal;
+    }
+
+    .tag {
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    // terminal style
+    &.bash,
+    &.sh {
+        background: #2d2d2d;
+        .line {
+            color: $gray-lighter;
+        }
+    }
+
+
+    //
+    pre {
+      .comment,
+      .title {
+        color: $comment;
+      }
+
+      .variable,
+      .attribute,
+      .tag,
+      .regexp,
+      .ruby .constant,
+      .xml .tag, .title,
+      .xml .pi,
+      .xml .doctype,
+      .html .doctype,
+      .css .id,
+      .css .class,
+      .css .pseudo {
+        color: $red;
+      }
+
+      .number,
+      .preprocessor,
+      .built_in,
+      .literal,
+      .params,
+      .constant {
+        color: $orange;
+      }
+
+      .class,
+      .ruby .class .title,
+      .css .rules .attribute {
+        color: $green;
+      }
+
+      .string,
+      .value,
+      .inheritance,
+      .header,
+      .ruby .symbol,
+      .xml .cdata {
+        color: $green;
+      }
+
+      .css .hexcolor {
+        color: $aqua;
+      }
+
+      .function,
+      .python .decorator,
+      .python .title,
+      .ruby .function .title,
+      .ruby .title .keyword,
+      .perl .sub,
+      .javascript .title,
+      .coffeescript .title {
+        color: $blue;
+      }
+
+      .keyword,
+      .javascript .function {
+        color: $purple;
+      }
+    }
+
+} // .highlight
+
