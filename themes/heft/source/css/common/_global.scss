@@ -13,6 +13,9 @@ body {
 img {
     @include img-fluid;
 }
+.stretch img {
+    width: 100%;
+}
 
 #content {
     > * {

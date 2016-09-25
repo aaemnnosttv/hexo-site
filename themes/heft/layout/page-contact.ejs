@@ -1,0 +1,26 @@
+<main id="content" class="page page-contact">
+
+    <%- page.content %>
+
+    <form action="https://formspree.io/me@aaemnnost.tv" method="POST" class="m-y-3">
+        <input type="hidden" name="_subject" value="Hello from someone on your website!" />
+        <input type="hidden" name="_next" value="<%- url_for('got-it') %>" />
+
+        <div class="form-group row">
+            <div class="col-xs-12 col-sm-6">
+                <input class="form-control" type="text" name="name" placeholder="By what name are you known?">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <input class="form-control" type="email" name="_replyto" placeholder="To which email shall I reply?">
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea name="message" rows="7" class="form-control" placeholder="What sayest thee?"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="text" name="_gotcha" />
+            <input class="form-control" type="submit" value="Send">
+        </div>
+    </form>
+
+</main>

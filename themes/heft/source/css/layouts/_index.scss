@@ -3,6 +3,13 @@ main.index {
     article {
         margin: ($spacer-y * 2) auto;
     }
+    .article-title {
+        line-height: 1.4em;
+    }
+    .col-date {
+        padding-top: .3em;
+        padding-bottom: .3em;
+    }
 }
 
 .taggish {

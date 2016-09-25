@@ -1,9 +1,17 @@
 <meta charset="utf-8">
-<title><% if (page.title){ %><%= page.title %> | <% } %><%= theme.title %></title>
+
+<title><% if (page.title){ %><%= page.title %> | <% } %><%= config.title %></title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 <% if (config.noindex || page.noindex) { %>
 <meta name="robots" content="noindex, nofollow">
 <% } %>
-<link rel="shortcut icon" href="<%- url_for(theme.favicon) %>">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
 <%- css('css/main') %>
+
+<% if (config.favicon) { -%>
+<link rel="shortcut icon" href="<%- url_for(config.favicon) %>">
+<% } -%>

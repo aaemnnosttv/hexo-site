@@ -6,7 +6,7 @@
             <small class="text-muted">@aaemnnosttv</small>
         </a>
 
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav nav-local">
             <% _.each(config.nav_primary, function(item, key) { %>
                 <% isActive = (url_for(item) == '/' + path.replace('/index.html', '')) || (url_for(item) == '/.' && is_home()) %>
 
@@ -14,10 +14,9 @@
                     <a class="nav-link" href="<%- url_for(item) %>"><%= key %></a>
                 </li>
             <% }) %>
-
-
         </ul>
-        <ul class="nav navbar-nav pull-sm-right">
+
+        <ul class="nav navbar-nav nav-social">
             <% if (config.network.twitter) { %>
                 <li class="nav-item social">
                     <a href="<%- config.network.twitter %>" class="nav-link" target="_blank">Twitter</a>

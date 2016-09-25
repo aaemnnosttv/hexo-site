@@ -1,0 +1,30 @@
+.nav-primary {
+
+    .container {
+        display: flex;
+    }
+
+    .nav {
+        margin-left: $spacer-x;
+    }
+
+    .nav-item {
+        border-bottom: 2px solid transparent;
+
+        &.active {
+            border-bottom-color: rgba($purple, .5);
+        }
+    }
+
+    .nav-local {
+        margin-left: auto;
+
+        .nav-link {
+            color: $purple;
+        }
+    }
+
+    .nav-item {
+        // font-size:
+    }
+}
