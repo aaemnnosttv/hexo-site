@@ -1,6 +1,7 @@
 
 html, body {
-    min-height: 100%;
+    height: 100%;
+    overflow: auto;
 }
 
 html {
@@ -8,6 +9,11 @@ html {
 }
 body {
     background-color: transparent;
+    @include gradient-directional(rgba(orange, .10), transparent, 200deg);
+
+
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -18,6 +24,8 @@ img {
 }
 
 #content {
+    flex-grow: 1;
+
     > * {
         max-width: 680px;
         margin-left: auto;

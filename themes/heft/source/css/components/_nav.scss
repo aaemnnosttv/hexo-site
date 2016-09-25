@@ -1,4 +1,7 @@
 .nav-primary {
+    .navbar-brand {
+        color: $brand-primary;
+    }
 
     .container {
         display: flex;

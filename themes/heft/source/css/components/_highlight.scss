@@ -5,14 +5,16 @@
 $current-line: #393939;
 $selection: #515151;
 $foreground: #ccc;
-$comment: #999;
-// $red: #f2777a;
-$orange: #f99157;
-// $yellow: #ffcc66;
-// $green: #99cc99;
-$aqua: #66cccc;
-// $blue: #6699cc;
-// $purple: #cc99cc;
+
+// GitHub
+$plain: #333;
+$comment: #969896;
+
+$magenta: #a71d5d; // "function"
+$lavendar: #795da3; // function name
+$navy: #183691;
+$orange: orange;
+$aqua: #0086b3;
 
 .highlight {
     margin: ($spacer-y * 2) auto;
@@ -21,9 +23,7 @@ $aqua: #66cccc;
     background: white;
     overflow: auto;
 
-    border-style: solid;
-    border-width: 1px 0;
-    border-color: $blue;
+    box-shadow: 0 0 10px rgba(#666, .07);
 
     td {
         vertical-align: top;
@@ -68,70 +68,69 @@ $aqua: #66cccc;
 
 
     //
-    pre {
-      .comment,
-      .title {
+    .comment,
+    .title {
         color: $comment;
-      }
+    }
 
-      .variable,
-      .attribute,
-      .tag,
-      .regexp,
-      .ruby .constant,
-      .xml .tag, .title,
-      .xml .pi,
-      .xml .doctype,
-      .html .doctype,
-      .css .id,
-      .css .class,
-      .css .pseudo {
-        color: $red;
-      }
+    &.php {
 
-      .number,
-      .preprocessor,
-      .built_in,
-      .literal,
-      .params,
-      .constant {
+        .doctag,
+        .function,
+        .keyword {
+            color: $magenta;
+        }
+
+        .title {
+            color: $aqua;
+        }
+
+        .function {
+            .title { color: $lavendar; }
+            .params { color: $plain; }
+        }
+
+    } // php
+
+    .variable,
+    .attribute,
+    .tag,
+    .regexp,
+    .xml .tag, .title,
+    .xml .pi,
+    .xml .doctype,
+    .html .doctype,
+    .css .id,
+    .css .class,
+    .css .pseudo {
+        color: $lavendar;
+    }
+
+    .number,
+    .preprocessor,
+    .built_in,
+    .literal,
+    .constant {
         color: $orange;
-      }
+    }
 
-      .class,
-      .ruby .class .title,
-      .css .rules .attribute {
-        color: $green;
-      }
+    .string,
+    .value,
+    .inheritance,
+    .header,
+    .ruby .symbol,
+    .xml .cdata {
+        color: $navy;
+    }
 
-      .string,
-      .value,
-      .inheritance,
-      .header,
-      .ruby .symbol,
-      .xml .cdata {
-        color: $green;
-      }
-
-      .css .hexcolor {
+    .css .hexcolor {
         color: $aqua;
-      }
+    }
 
-      .function,
-      .python .decorator,
-      .python .title,
-      .ruby .function .title,
-      .ruby .title .keyword,
-      .perl .sub,
-      .javascript .title,
-      .coffeescript .title {
-        color: $blue;
-      }
 
-      .keyword,
-      .javascript .function {
+
+    .javascript .function {
         color: $purple;
-      }
     }
 
 } // .highlight
