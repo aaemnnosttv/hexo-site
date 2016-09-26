@@ -1,3 +1,5 @@
-<main id="content" class="page">
-    <%- page.content %>
+<main id="content" class="page page--<%- page.path.replace('/index.html','') %>">
+    <div class="container">
+        <%- page.content %>
+    </div>
 </main>

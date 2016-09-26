@@ -26,7 +26,7 @@ img {
 #content {
     flex-grow: 1;
 
-    > * {
+    > *:not(.container) {
         max-width: 680px;
         margin-left: auto;
         margin-right: auto;

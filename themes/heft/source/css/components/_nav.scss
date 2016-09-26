@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
             flex-direction: row;
 
             .nav { margin-left: auto; }
@@ -18,10 +18,27 @@
     }
 
     .nav-item {
-        border-bottom: 2px solid transparent;
+        position: relative;
+        // border-bottom: 2px solid transparent;
 
-        &.active {
-            border-bottom-color: rgba($purple, .5);
+        &:after {
+            position: absolute;
+            left: 0%;
+            bottom: -3px;
+            content: '';
+            width: 100%;
+            border-bottom: 2px solid rgba($purple, .5);
+            transition: all 0.1s linear;
+            transform: scaleX(0);
+        }
+        &:hover:after {
+            transform: scaleX(1);
+        }
+
+        &.active:after {
+            transform: none;
+            // border-bottom-color: rgba($purple, .5);
+            border-bottom: 2px solid $purple;
         }
     }
 }

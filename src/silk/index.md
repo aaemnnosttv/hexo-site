@@ -1,15 +1,20 @@
 ---
 title: Silk
+layout: project
 id: 588
 comment: false
 date: 2016-07-09 16:03:55
----
 
-_A modern API for WordPress.  [[Project](https://github.com/aaemnnosttv/silk)] [[Documentation](https://github.com/aaemnnosttv/silk-docs)] [[Twitter](https://twitter.com/silkwp)]_
+subtitle: A modern API for WordPress.
+repo: https://github.com/aaemnnosttv/silk
+links:
+  Docs: https://github.com/aaemnnosttv/silk-docs
+  Twitter: https://twitter.com/silkwp
+---
 
 ## What is Silk?
 
-Silk is a _library_ for working with WordPress in a modern, object-oriented way. Designed with the developer in mind, it gives you the tools to get things done efficiently and elegantly.
+Silk is a library for working with WordPress in a modern, object-oriented way. Designed with the developer in mind, it gives you the tools to get things done efficiently and elegantly.
 
 ## Who is Silk For?
 

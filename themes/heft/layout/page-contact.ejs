@@ -1,26 +1,34 @@
 <main id="content" class="page page-contact">
+    <div class="container w-100">
 
-    <%- page.content %>
+        <%- page.content %>
 
-    <form action="https://formspree.io/me@aaemnnost.tv" method="POST" class="m-y-3">
-        <input type="hidden" name="_subject" value="Hello from someone on your website!" />
-        <input type="hidden" name="_next" value="<%- url_for('got-it') %>" />
+        <form action="https://formspree.io/me@aaemnnost.tv" method="POST" class="m-t-1">
+            <input type="hidden" name="_subject" value="Hello from someone on your website!" />
+            <input type="hidden" name="_next" value="<%- url_for('got-it') %>" />
 
-        <div class="form-group row">
-            <div class="col-xs-12 col-sm-6">
-                <input class="form-control" type="text" name="name" placeholder="By what name are you known?">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="name" placeholder="By what name are you known?">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="_replyto" placeholder="To which email shall I reply?">
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-12 col-sm-6">
-                <input class="form-control" type="email" name="_replyto" placeholder="To which email shall I reply?">
+            <div class="form-group">
+                <textarea name="message" rows="7" class="form-control" placeholder="What sayest thee?"></textarea>
             </div>
-        </div>
-        <div class="form-group">
-            <textarea name="message" rows="7" class="form-control" placeholder="What sayest thee?"></textarea>
-        </div>
-        <div class="form-group">
-            <input type="text" name="_gotcha" />
-            <input class="form-control btn-primary" type="submit" value="Send">
-        </div>
-    </form>
+            <div class="form-group">
+                <input type="text" name="_gotcha" />
+                <input class="btn btn-primary btn-block m-x-auto" style="max-width: 50%;" type="submit" value="Send">
+            </div>
+        </form>
+
+    </div>
+
 
 </main>

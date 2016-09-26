@@ -1,0 +1,17 @@
+<% console.log(page) %>
+<main id="content" class="project project--">
+    <div class="container">
+        <h1><%= page.title %></h1>
+        <h4 class="subtitle"><%= page.subtitle %></h4>
+
+        <ul class="list-inline">
+            <li class="list-inline-item"><%- link_to(page.repo, 'Source', {external: true}) %></li>
+            <%- _.map(page.links, (url, text) => `<li class="list-inline-item">${link_to(url, text, {external: true})}</li>` )
+                .join("\n") %>
+        </ul>
+
+        <hr>
+
+        <%- page.content %>
+    </div>
+</main>
