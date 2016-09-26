@@ -1,6 +1,6 @@
 ---
 title: >-
-  Going Plaidinum: WordPress Login, Coming to a Browser Near You -- at Ludicrous
+  Going Plaidinum: WordPress Login, Coming to a Browser Near You &mdash; at Ludicrous
   Speed
 id: 679
 categories:

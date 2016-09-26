@@ -71,8 +71,8 @@ disqus_shortname: aaemnnosttv
 
 # Social
 network:
-  github: https://github.com/aaemnnosttv
-  twitter: https://twitter.com/aaemnnosttv
+  GitHub: https://github.com/aaemnnosttv
+  Twitter: https://twitter.com/aaemnnosttv
 
 nav_primary:
   "Open Source": open-source

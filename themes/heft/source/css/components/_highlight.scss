@@ -16,6 +16,13 @@ $navy: #183691;
 $orange: orange;
 $aqua: #0086b3;
 
+code {
+    box-shadow: inset 0 0 1px rgba($gray-light, .5);
+}
+blockquote code {
+    color: inherit;
+}
+
 .highlight {
     margin: ($spacer-y * 2) auto;
     padding: 0.5em 0;
@@ -61,7 +68,8 @@ $aqua: #0086b3;
     &.bash,
     &.sh {
         background: #2d2d2d;
-        .line {
+        .line,
+        .string {
             color: $gray-lighter;
         }
     }
@@ -104,14 +112,6 @@ $aqua: #0086b3;
     .css .class,
     .css .pseudo {
         color: $lavendar;
-    }
-
-    .number,
-    .preprocessor,
-    .built_in,
-    .literal,
-    .constant {
-        color: $orange;
     }
 
     .string,

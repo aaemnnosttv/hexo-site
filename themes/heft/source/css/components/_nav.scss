@@ -1,14 +1,20 @@
 .nav-primary {
+    padding-left: 0;
+    padding-right: 0;
+
     .navbar-brand {
         color: $brand-primary;
     }
 
     .container {
         display: flex;
-    }
+        flex-direction: column;
 
-    .nav {
-        margin-left: $spacer-x;
+        @include media-breakpoint-up(sm) {
+            flex-direction: row;
+
+            .nav { margin-left: auto; }
+        }
     }
 
     .nav-item {
@@ -17,17 +23,5 @@
         &.active {
             border-bottom-color: rgba($purple, .5);
         }
-    }
-
-    .nav-local {
-        margin-left: auto;
-
-        .nav-link {
-            color: $purple;
-        }
-    }
-
-    .nav-item {
-        // font-size:
     }
 }

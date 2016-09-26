@@ -1,0 +1,8 @@
+
+.page-contact {
+    @include center-content();
+
+    form {
+        width: 100%;
+    }
+}

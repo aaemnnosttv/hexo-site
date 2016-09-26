@@ -3,6 +3,7 @@
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+@import "common/mixins";
 @import "common/global";
 
 @import "components/highlight";
@@ -11,3 +12,4 @@
 @import "components/nav";
 
 @import "layouts/index";
+@import "layouts/pages";

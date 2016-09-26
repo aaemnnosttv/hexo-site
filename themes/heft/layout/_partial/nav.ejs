@@ -1,4 +1,4 @@
-<nav class="nav-primary navbar">
+<nav class="nav-primary navbar navbar-full">
 
     <div class="container">
         <a class="navbar-brand" href="/">
@@ -6,27 +6,20 @@
             <small class="text-muted">@aaemnnosttv</small>
         </a>
 
-        <ul class="nav navbar-nav nav-local">
+        <ul class="nav navbar-nav">
             <% _.each(config.nav_primary, function(item, key) { %>
                 <% isActive = (url_for(item) == '/' + path.replace('/index.html', '')) || (url_for(item) == '/.' && is_home()) %>
 
-                <li class="nav-item <%= isActive ? 'active' : '' %>">
+                <li class="nav-item local <%= isActive ? 'active' : '' %>">
                     <a class="nav-link" href="<%- url_for(item) %>"><%= key %></a>
                 </li>
             <% }) %>
-        </ul>
 
-        <ul class="nav navbar-nav nav-social">
-            <% if (config.network.twitter) { %>
+            <% _.each(config.network, function(url, network) { %>
                 <li class="nav-item social">
-                    <a href="<%- config.network.twitter %>" class="nav-link" target="_blank">Twitter</a>
+                    <%- link_to(url, network, {class: "nav-link", external: true}) %>
                 </li>
-            <% } %>
-            <% if (config.network.github) { %>
-                <li class="nav-item social">
-                    <a href="<%- config.network.github %>" class="nav-link" target="_blank">GitHub</a>
-                </li>
-            <% } %>
+            <% }) %>
         </ul>
 
     </div>

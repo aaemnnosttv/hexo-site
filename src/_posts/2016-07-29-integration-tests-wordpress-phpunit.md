@@ -28,14 +28,14 @@ Before we begin, open your Terminal, and change into a clean working directory;
 ### Create a fresh install of Bedrock
 
 ```bash
-composer create-project roots/bedrock my-project
-cd my-project
+$ composer create-project roots/bedrock my-project
+$ cd my-project
 ```
 
 #### Configure `.env`
 
 ```bash
-cp .env.example .env
+$ cp .env.example .env
 ```
 
 Edit the `.env` file using your editor of choice, and make sure at least these are set up for your local environment.  The website does not need to be accessible by http (ie: no need to setup in hosts just yet).
@@ -54,17 +54,17 @@ WP_SITEURL=${WP_HOME}/wp
 #### Create the database
 
 ```bash
-wp db create
+$ wp db create
 ```
 
 > WP-CLI not required, but you're doing yourself a disservice by not having that yet _;)_  [Go get it right now](http://wp-cli.org/#installing) -- takes 30 seconds.
 
 ### Install Testing Packages
 
-``` bash
-composer config extra.wordpress-tests-core-dir tests/core
-composer require --dev aaemnnosttv/wordpress-tests-core:dev-master phpunit/phpunit:^5.0
-echo 'tests/core' >> .gitignore
+```bash
+$ composer config extra.wordpress-tests-core-dir tests/core
+$ composer require --dev aaemnnosttv/wordpress-tests-core:dev-master phpunit/phpunit:^5.0
+$ echo 'tests/core' >> .gitignore
 ```
 
 What we did:
@@ -109,7 +109,7 @@ This is installed by Composer, ignore it!
 This tells PHPUnit to scan all `php` files in the `tests/unit` directory for our test cases.  This directory doesn't exist yet, so let's create that now.
 
 ```bash
-mkdir tests/unit
+$ mkdir tests/unit
 ```
 
 #### Testing-specific Environment Variables (!!!)
@@ -220,7 +220,7 @@ class ExampleTest extends WP_UnitTestCase
 ### Run PHPUnit!
 
 ```bash
-vendor/bin/phpunit
+$ vendor/bin/phpunit
 ```
 
 <div class="asciinema-embed"><script id="asciicast-23gv08ivwcohw0supt6mhmd12" src="https://asciinema.org/a/23gv08ivwcohw0supt6mhmd12.js" async="" type="text/javascript" data-autoplay="1" data-loop="1"></script><style scoped>.asciicast { max-height: 250px !important; }</style></div>

@@ -37,7 +37,7 @@ main {
     a {
         text-decoration: none !important;
         border-bottom: 2px solid rgba($green, .35);
-        transition: border-bottom-color .5s;
+        transition: color .5s, border-bottom-color .5s;
 
         &:hover {
             border-bottom-color: rgba($red, .8);
@@ -48,7 +48,10 @@ main {
         }
     }
     h1, h2, h3, h4 {
-        code { background: transparent; }
+        code {
+            background: transparent;
+            box-shadow: none;
+        }
     }
 }
 
@@ -56,6 +59,10 @@ main {
 blockquote {
     @extend .blockquote;
     color: $text-muted;
+
+    a {
+        color: inherit;
+    }
 
     :last-child {
         margin-bottom: 0;
@@ -69,3 +76,17 @@ blockquote {
 .nobr {
     br { display: none; }
 }
+
+.taggish {
+    font-size: 0.6em;
+    background: rgba($yellow, 0.3);
+    padding: 1px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    a {
+        color: inherit;
+        border: none;
+    }
+}
+
+
