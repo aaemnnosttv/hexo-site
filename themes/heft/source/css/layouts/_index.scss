@@ -32,10 +32,14 @@
             background-color: rgba(#f9fcee, .18);
         }
         .article-title a {
+            display: block;
             color: white;
             text-shadow: -1px -1px 1px rgba(black, 0.4);
             // border-bottom-color: silver;
             border-bottom-color: transparent;
+            &:hover {
+                color: lighten($green, 30%);
+            }
         }
         .date {
             color: rgba($gray-lighter, .7);
