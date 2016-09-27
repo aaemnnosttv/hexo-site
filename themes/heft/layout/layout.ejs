@@ -3,9 +3,32 @@
 <head>
     <%- partial('_partial/head') %>
 </head>
-<body class="<%= is_home() ? 'home' : '' %>">
+<%
+console.log(page)
+function bodyClasses() {
+    return _({
+        home: is_home(),
+        archive: is_archive(),
+        tag: is_tag(),
+        category: is_category(),
+        page_first: page.current == 1 && page.total > 1,
+        page_last: page.current == page.total && page.total > 1
+    })
+    .map((value, key) => value ? key.replace('_','-') : false)
+    .union([
+        page.layout ? `layout--${page.layout}` : '',
+        page.__index ? 'layout--index' : '',
+        page.layout ? `${page.layout}--${page.path.replace('/index.html','')}` : ''
+    ])
+    .filter()
+    .join(' ')
+}
+%>
+<body class="<%= bodyClasses() %>">
     <%- partial('_partial/nav') %>
-    <%- body %>
+    <main id="content">
+        <%- body %>
+    </main>
     <%- partial('./_partial/footer') %>
 </body>
 </html>

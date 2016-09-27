@@ -1,13 +1,11 @@
-<main id="content" class="index">
-    <% var posts = page.posts %>
-    <% if (is_home()) { %>
-        <% posts = page.posts.skip(1); %>
-        <%- partial('./_partial/home-box', {post: page.posts.first()}) %>
-    <% } %>
+<% var posts = page.posts %>
+<% if (is_home()) { %>
+    <% posts = page.posts.skip(1); %>
+    <%- partial('./_partial/home-box', {post: page.posts.first()}) %>
+<% } %>
 
-    <% posts.each(function(post) { %>
-        <%- partial('./_partial/article-row-item', {post: post}) %>
-    <% }) %>
+<% posts.each(function(post) { %>
+    <%- partial('./_partial/article-row-item', {post: post}) %>
+<% }) %>
 
-    <%- partial('./_widget/paginator') %>
-</main>
+<%- partial('./_widget/paginator') %>

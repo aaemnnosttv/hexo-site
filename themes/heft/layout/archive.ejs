@@ -1,7 +1,5 @@
-<main id="content" class="archive">
-  <% page.posts.each(function(post){ %>
-    <%- partial('./_partial/archive', {post: post, index: false}) %>
-  <% }) %>
+<% page.posts.each(function(post){ %>
+<%- partial('./_partial/article-row-item', {post: post}) %>
+<% }) %>
 
-  <%- partial('./_widget/paginator') %>
-</main>
+<%- partial('./_widget/paginator') %>
