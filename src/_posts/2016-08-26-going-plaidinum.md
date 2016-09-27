@@ -34,7 +34,9 @@ For developers though, getting an email sent can be a non-option or just equall
 
 ### Get your magic link, and launch it too
 
-[![WP-CLI Login Command Demo](https://aaemnnost.tv/app/uploads/2016/08/Screen-Recording-2016-08-26-at-06.46-PM.gif)](https://aaemnnost.tv/app/uploads/2016/08/Screen-Recording-2016-08-26-at-06.46-PM.gif)
+<div class="wide">
+[![WP-CLI Login Command Demo](/images/wp-login-command-demo.gif)](/images/wp-login-command-demo.gif)
+</div>
 
 What could possibly faster than that? If you think you know, drop it in the comments below :)
 
