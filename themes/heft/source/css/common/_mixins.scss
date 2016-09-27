@@ -5,3 +5,9 @@
     justify-content: center;
     flex-direction: column;
 }
+
+@mixin main-container() {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,27 +1,13 @@
 <main id="content" class="index">
-    <div class="contained">
+    <% var posts = page.posts %>
+    <% if (is_home()) { %>
+        <% posts = page.posts.skip(1); %>
+        <%- partial('./_partial/home-box', {post: page.posts.first()}) %>
+    <% } %>
 
-    <% page.posts.each(function(post) { %>
-        <article class="row">
-            <div class="col-xs-12 col-sm-2 col-date">
-                <div class="date text-muted">
-                    <span class="date-year"><%- date(post.date, 'YYYY') %></span>
-                    <span class="date-month"><%- date(post.date, 'MMMM') %></span>
-                    <span class="date-day"><%- date(post.date, 'Do') %></span>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-10 col-primary">
-                <h3 class="article-title">
-                    <a href="<%- url_for(post.path) %>"><%- post.title %></a>
-                </h3>
-
-                <ul class="list-inline post-categories">
-                <%- post.categories.map(cat => `<li class="list-inline-item taggish"><a href="${url_for(cat.path)}">${cat.name}</a></li>`).join('') %>
-                </ul>
-            </div>
-        </article>
+    <% posts.each(function(post) { %>
+        <%- partial('./_partial/article-row-item', {post: post}) %>
     <% }) %>
 
     <%- partial('./_widget/paginator') %>
-    </div>
 </main>

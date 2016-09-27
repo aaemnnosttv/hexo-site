@@ -10,9 +10,37 @@ main.index {
         padding-top: .3em;
         padding-bottom: .3em;
     }
-    .date span {
-        @include media-breakpoint-up(sm) {
-            display: block;
+    .date {
+        color: $text-muted;
+
+        span {
+            @include media-breakpoint-up(sm) {
+                display: block;
+            }
         }
+    }
+
+    .home-box {
+        background-size: cover;
+        background-position: center;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        article {
+            background-color: rgba(#f9fcee, .18);
+        }
+        .article-title a {
+            color: white;
+            text-shadow: -1px -1px 1px rgba(black, 0.4);
+        }
+        .date { color: $gray-lighter; }
+        .taggish {
+            background-color: rgba($yellow, .7);
+        }
+    }
+    .home-box .contained {
+        @include main-container;
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <%- partial('_partial/head') %>
 </head>
-<body>
+<body class="<%= is_home() ? 'home' : '' %>">
     <%- partial('_partial/nav') %>
     <%- body %>
     <%- partial('./_partial/footer') %>
