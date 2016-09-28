@@ -1,3 +1,17 @@
+.layout--page {
+    .nav-primary {
+        margin-bottom: ($spacer-y * 2);
+    }
+}
+
+.layout--wp-cli-commands {
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: $gray-dark;
+    }
+}
 
 .layout--page-contact main {
 
@@ -7,4 +21,10 @@
     }
 
     @include center-content();
+}
+
+.layout--page-contact {
+     main {
+        @include center-content();
+     }
 }

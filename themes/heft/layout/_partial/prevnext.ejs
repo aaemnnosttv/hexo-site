@@ -1,0 +1,13 @@
+<div class="prevnext wide m-y-2">
+    <%- _({prev: post.next, next: post.prev}).map((post, which) => {
+        return ! post ? '' : `
+            <div class="post-adj adj-${which}">
+                <small class="d-block adj-label"></small>
+                <a href="${url_for(post.path)}" class="adj-link ">
+                    ${post.title}
+                </a>
+            </div>
+        `;
+    }).join('') %>
+    </div>
+</div>

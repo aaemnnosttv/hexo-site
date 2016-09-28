@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1><%- page.title %></h1>
+            <%- page.content %>
+        </div>
+    </div>
+</div>
+
+<div class="card-deck wide">
+    <%- _(page.commands).map((info, slug) => {
+        return `<div class="card card-inverse">
+            <div class="card-block">
+                <h4 class="card-title m-b-0"><samp>${slug}</samp></h4>
+                <hr />
+                <div class="card-text">${info}</div>
+            </div>
+            <div class="card-block">
+                <a href="/wp-cli-commands/${slug}/" class="btn btn-primary btn-block">More</a>
+            </div>
+        </div>
+        `;
+    }).join('')  %>
+</div>

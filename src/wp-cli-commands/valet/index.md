@@ -3,6 +3,9 @@ title: WP-CLI Valet Command
 id: 602
 comment: false
 date: 2016-07-10 12:50:10
+layout: project
+subtitle: Harness the power of Laravel Valet for creating fully functional WordPress installs in seconds.
+repo: https://github.com/aaemnnosttv/wp-cli-valet-command
 ---
 
 This command aims to bring the speed and convenience of using Laravel Valet to WordPress.
@@ -34,7 +37,7 @@ New sites create a new MySQL database by default, but the `new` command also sup
 The `valet` command also supports completely removing a WordPress installation as well.
 
 ```bash
-wp valet destroy demo
+$ wp valet destroy demo
 ```
 
 This will drop the database, delete all the files, as well as remove the self-signed TLS certificate which was created and trusted for you if the site was provisioned with https.

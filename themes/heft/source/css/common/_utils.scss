@@ -1,0 +1,30 @@
+// Utilities
+//
+//
+
+.flexed {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
+}
+
+.nobr {
+    br { display: none; }
+}
+
+.taggish {
+    font-size: 0.6em;
+    background: rgba($yellow, 0.3);
+    padding: 1px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    a {
+        color: inherit;
+        border: none;
+    }
+}
+

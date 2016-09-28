@@ -1,0 +1,30 @@
+.layout--post {
+    main {
+        padding-left: $spacer-x;
+        padding-right: $spacer-x;
+    }
+}
+
+.prevnext {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(md) {
+        padding: 0 ($spacer-x * 2);
+    }
+}
+//  < PREV || NEXT >
+.post-adj {
+    max-width: 42%;
+
+    &.adj-prev small:before { content: 'PREVIOUS'; }
+    &.adj-next small:before { content: 'NEXT'; }
+    &.adj-next {
+        text-align: right;
+    }
+
+    .adj-label {
+        color: rgba($body-color, .5);
+    }
+    .adj-link {   }
+}

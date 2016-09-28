@@ -1,3 +1,4 @@
+<% console.log(page) %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,14 +11,15 @@ function bodyClasses() {
         archive: is_archive(),
         tag: is_tag(),
         category: is_category(),
+        layout__index: !! page.__index,
         page_first: page.current == 1 && page.total > 1,
         page_last: page.current == page.total && page.total > 1
     })
-    .map((value, key) => value ? key.replace('_','-') : false)
+    .map((value, key) => value ? key.replace(/\_/g, '-') : false)
     .union([
         page.layout ? `layout--${page.layout}` : '',
-        page.__index ? 'layout--index' : '',
-        page.layout ? `${page.layout}--${page.path.replace('/index.html','')}` : ''
+        page.layout && page.slug ? `${page.layout}--${page.slug}` : '',
+        page.layout && ! page.slug ? `${page.layout}--${page.path.replace(/[^\w-]/g, '-').replace(/(-index-html|^-+|-+$)/g, '')}` : '',
     ])
     .filter()
     .join(' ')

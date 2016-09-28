@@ -25,6 +25,7 @@ img {
 
 #content {
     flex-grow: 1;
+    flex-shrink: 0;
 
     > *:not(.container) {
         max-width: 680px;
@@ -72,24 +73,16 @@ blockquote {
     }
 
     #content > & {
-        max-width: 860px;
+        max-width: 860px !important;
+        margin-top: ($spacer-y * 2);
+        margin-bottom: ($spacer-y * 2);
     }
 }
 
-.nobr {
-    br { display: none; }
-}
-
-.taggish {
-    font-size: 0.6em;
-    background: rgba($yellow, 0.3);
-    padding: 1px 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    a {
-        color: inherit;
-        border: none;
-    }
+p + h2,
+p + h3,
+p + h4 {
+    margin-top: ($spacer-y * 2);
 }
 
 

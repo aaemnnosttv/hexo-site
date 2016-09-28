@@ -2,6 +2,10 @@
 
 <%- partial('_widget/sharing') %>
 
+<% if (page.prev || page.next) { -%>
+<%- partial('_partial/prevnext', {post: page}) %>
+<% } -%>
+
 <% if (theme.disqus_shortname) { %>
 <%- partial('_widget/disqus') %>
 <% } %>

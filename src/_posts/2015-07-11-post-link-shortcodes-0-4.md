@@ -4,7 +4,7 @@ tags:
   - Release
 id: 526
 categories:
-  - News
+  - Announcement
   - Plugins
 date: 2015-07-11 22:27:03
 ---

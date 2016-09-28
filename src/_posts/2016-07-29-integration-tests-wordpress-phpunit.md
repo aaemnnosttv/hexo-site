@@ -17,7 +17,7 @@ How many times have you been in the situation when faced with making a change be
 
 This post will walk you through how to setup the WordPress core PHPUnit test suite with your _site_, so you can write and run tests to make assertions about how your site is working _as a whole_.
 
-> This guide is in the context of using the _Roots Bedrock_ WordPress boilerplate as a starting point for building modern WordPress applications.  With that said, it could likely be adapted to fit any other Composer-based WordPress stack-type project, but if you're using the standard WordPress zip download as your starting point, this guide will not work for you.  This is also not a tutorial about how to write tests for PHPUnit -- there are plenty of those.
+> This guide is in the context of using the **Roots Bedrock** WordPress boilerplate as a starting point for building modern WordPress applications.  With that said, it could likely be adapted to fit any other Composer-based WordPress stack-type project, but if you're using the standard WordPress zip download as your starting point, this guide will not work for you.  This is also not a tutorial about how to write tests for PHPUnit -- there are plenty of those.
 
 ## Getting Started
 
@@ -57,7 +57,7 @@ WP_SITEURL=${WP_HOME}/wp
 $ wp db create
 ```
 
-> WP-CLI not required, but you're doing yourself a disservice by not having that yet _;)_  [Go get it right now](http://wp-cli.org/#installing) -- takes 30 seconds.
+> WP-CLI not required, but you're doing yourself a disservice by not having that yet ;)  [Go get it right now](http://wp-cli.org/#installing) -- takes 30 seconds.
 
 ### Install Testing Packages
 
@@ -160,6 +160,7 @@ require_once(dirname(__DIR__) . '/config/application.php');
 ```
 
 This is the exact same as Bedrock's `web/wp-config.php`, less the require for `wp-settings.php` as the WordPress test suite loads that.
+  
 
 ## Add environment configuration for the new `testing` environment
 

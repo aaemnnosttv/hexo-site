@@ -3,9 +3,9 @@ title: Post Link Shortcodes
 id: 1
 categories:
   - Plugins
-  - Teaser
 date: 2013-08-23 18:39:53
 tags:
+  - Teaser
 ---
 
 A new plugin is coming soon!  How soon you ask?  Well, that all depends on how fast the folks over at WP Plugin Review HQ have their[ drinking bird toy pecking the Y key](http://www.youtube.com/watch?v=fldj5GXMy6o).   But if you stay tuned to this website that has only existed for a matter of minutes, you'll be the first to know when it hits the WP Plugin Repository!
