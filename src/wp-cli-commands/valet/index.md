@@ -1,8 +1,5 @@
 ---
 title: WP-CLI Valet Command
-id: 602
-comment: false
-date: 2016-07-10 12:50:10
 layout: project
 subtitle: Harness the power of Laravel Valet for creating fully functional WordPress installs in seconds.
 repo: https://github.com/aaemnnosttv/wp-cli-valet-command

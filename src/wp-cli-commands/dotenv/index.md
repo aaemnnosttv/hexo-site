@@ -1,14 +1,14 @@
 ---
 title: WP-CLI Dotenv Command
-id: 654
-comment: false
-date: 2016-08-01 18:12:48
+layout: project
+subtitle: Interact with a .env file from the command line.
+repo: https://github.com/aaemnnosttv/wp-cli-dotenv-command
 ---
 
 This command is dedicated to handling various tasks of managing an environment file for your WordPress install.
 
 > By default WordPress does not use a dedicated environment file for environment-specific configuration and sensitive information.
-> Relevant WordPress-based projects: [Bedrock](https://roots.io/bedrock/), [Suzie](http://getsuzie.com/), [Themosis](http://framework.themosis.com/)
+> Relevant WordPress-based projects: [Bedrock](https://roots.io/bedrock/), [Suzie](http://getsuzie.com/), [WordPlate](https://wordplate.github.io/)
 
 The `dotenv` command is especially useful for use within other scripts.
 
