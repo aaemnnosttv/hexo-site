@@ -75,8 +75,8 @@ network:
   Twitter: https://twitter.com/aaemnnosttv
 
 nav_primary:
-  "Open Source": open-source
-  Contact: contact
+  open-source: Open Source
+  contact: Contact
 
 
 # Extensions
