@@ -1,8 +1,5 @@
 ---
 title: WP-CLI Login Command
-id: 661
-comment: false
-date: 2016-08-26 13:35:16
 layout: project
 
 repo: https://github.com/aaemnnosttv/wp-cli-login-command
@@ -10,7 +7,7 @@ subtitle: Login to WordPress with secure passwordless magic links.
 ---
 
 Have you ever thought:
-> "If I have the ability to create or delete users, change their password or any other data with a single command, why can't I <span style="text-decoration: underline;">login</span> as them just as easily?"
+> "If I have the ability to create or delete users, change their password or any other data with a single command, why can't I _login_ as them just as easily?"
 
 ## Enter the `login` command.
 
