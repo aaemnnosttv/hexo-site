@@ -13,12 +13,12 @@ timezone:
 google_analytics: UA-40536854-1
 
 # Search Engine indexing
-noindex: true
+noindex: false
 #############
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://aaemnnosttv.github.io
+url: https://aaemnnost.tv/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
