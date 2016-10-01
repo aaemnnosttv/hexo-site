@@ -12,27 +12,6 @@
 <head>
     <%- partial('_partial/head') %>
 </head>
-<%
-function bodyClasses() {
-    return _({
-        home: is_home(),
-        archive: is_archive(),
-        index__tag: is_tag(),
-        index__category: is_category(),
-        layout__index: !! page.__index,
-        page_first: page.current == 1 && page.total > 1,
-        page_last: page.current == page.total && page.total > 1
-    })
-    .map((value, key) => value ? key.replace(/\_/g, '-') : false)
-    .union([
-        page.layout ? `layout--${page.layout}` : '',
-        page.layout && page.slug ? `${page.layout}--${page.slug}` : '',
-        page.layout && ! page.slug ? `${page.layout}--${page.path.replace(/[^\w-]/g, '-').replace(/(-index-html|^-+|-+$)/g, '')}` : '',
-    ])
-    .filter()
-    .join(' ')
-}
-%>
 <body class="<%= bodyClasses() %>">
     <%- partial('_partial/nav') %>
     <main id="content">
