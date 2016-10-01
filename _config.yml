@@ -69,6 +69,8 @@ pagination_dir: page
 # Disqus
 disqus_shortname: aaemnnosttv
 
+facebook_app_id: 1749183118663625
+
 # Social
 network:
   GitHub: https://github.com/aaemnnosttv
