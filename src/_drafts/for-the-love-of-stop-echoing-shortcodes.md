@@ -36,4 +36,4 @@ And that's really it.  But we can do better than that!
 
 Wouldn't it be nice if we could just call a function like `call_shortcode('some_shortcode', $atts, $content)`  ?
 
-[gist id=0751dea2121db3a859fa]
+{% gist 0751dea2121db3a859fa %}

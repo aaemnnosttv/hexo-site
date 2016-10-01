@@ -58,7 +58,7 @@ So that's really nice and all, but still more characters than necessary, especia
 
 Let's DRY all that up with a simple `__return` helper function!
 
-[gist id="1b77e9300e77b4ac7748"]
+{% gist 1b77e9300e77b4ac7748 %}
 
 Just as shown before, we can pass a closure directly to the action or filter callback we are adding.  The only difference here is we're abstracting the creation of the closure within our little higher order function that simply returns whatever we gave it.  The function isn't called until the hook is fired.
 
