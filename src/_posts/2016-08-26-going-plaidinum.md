@@ -46,8 +46,4 @@ If you find the command useful, [give it a star on GitHub](https://github.com/aa
 
 LUDICROUS SPEED; _**GO!**_
 
-<div class="nobr">
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/mk7VWcuVOf0?rel=0" allowfullscreen></iframe>
-    </div>
-</div>
+<div>{% youtube mk7VWcuVOf0 %}</div>

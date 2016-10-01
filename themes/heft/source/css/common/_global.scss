@@ -23,6 +23,11 @@ img {
     width: 100%;
 }
 
+.video-container {
+    @extend .embed-responsive;
+    @extend .embed-responsive-16by9;
+}
+
 #content {
     flex-grow: 1;
     flex-shrink: 0;
