@@ -10,16 +10,16 @@
 -->
 <html>
 <head>
-    <%- partial('partial/head') %>
+    {{ partial('partial/head') }}
 </head>
-<body class="<%= bodyClasses() %>">
+<body class="{{ bodyClasses() }}">
 
-    <%- partial('partial/nav') %>
+    {{ partial('partial/nav') }}
 
     <main id="content">
-        <%- body %>
+        {{ body }}
     </main>
 
-    <%- partial('partial/footer') %>
+    {{ partial('partial/footer') }}
 </body>
 </html>

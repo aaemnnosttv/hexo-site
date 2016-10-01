@@ -1,0 +1,12 @@
+{% set posts = page.posts %}
+
+{% if is_home() %}
+    {% set posts = posts.skip(1) %}
+    {{ partial('partial/home-box', { post: page.posts.first() }) }}
+{% endif %}
+
+{% for post in posts.toArray() %}
+    {{ partial('partial/article-row-item', { post: post }) }}
+{% endfor %}
+
+{{ partial('widget/paginator') }}
