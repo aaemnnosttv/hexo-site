@@ -43,6 +43,9 @@ img {
 }
 
 main {
+    padding-left: $spacer-x;
+    padding-right: $spacer-x;
+
     a {
         text-decoration: none !important;
         border-bottom: 2px solid rgba($green, .35);

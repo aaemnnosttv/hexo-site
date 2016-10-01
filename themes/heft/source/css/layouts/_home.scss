@@ -1,5 +1,9 @@
 
 .home {
+    main {
+        padding-left: 0;
+        padding-right: 0;
+    }
     article {
         margin: ($spacer-y * 2) auto;
     }
