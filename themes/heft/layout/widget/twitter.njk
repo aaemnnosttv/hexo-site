@@ -1,11 +1,8 @@
-<a
-  class="twitter-share-button"
+<a class="twitter-share-button"
   data-size="large"
   data-via="aaemnnosttv"
-  href="https://twitter.com/intent/tweet?text=<%- page.content.substr(3, 20) %>"
->
-  Tweet
-</a>
+  href="https://twitter.com/intent/tweet?text={{ page.content | striptags | truncate(100) | urlencode }}"
+>Tweet</a>
 
 <script>
   window.twttr = (function(d, s, id) {

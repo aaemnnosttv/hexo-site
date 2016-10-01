@@ -1,0 +1,18 @@
+<h1>{{ page.title }}</h1>
+
+{% if page.subtitle %}
+<h4 class="subtitle h5 m-y-2">{{ page.subtitle }}</h4>
+{% endif %}
+
+<ul class="list-inline">
+    <li class="list-inline-item">
+        {{ link_to(page.repo, 'Source', { class: "btn btn-primary btn-sm", external: true }) }}</li>
+
+        {% for text, url in page.links %}
+            <li class="list-inline-item">{{ link_to(url, text, { class: "btn btn-primary btn-outline-primary btn-sm", external: true }) }}</li>
+        {% endfor %}
+</ul>
+
+<hr>
+
+{{ page.content }}

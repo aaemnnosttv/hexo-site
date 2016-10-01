@@ -1,0 +1,6 @@
+
+{% for post in page.posts.toArray() %}
+{{ partial('partial/article-row-item', { post: post }) }}
+{% endfor %}
+
+{{ partial('widget/paginator') }}

@@ -1,5 +1,5 @@
 <div class="fb-like"
-    data-href="<%- page.permalink %>"
+    data-href="{{ page.permalink }}"
     data-layout="button"
     data-action="like"
     data-size="large"
@@ -12,6 +12,6 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1749183118663625";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId={{ config.facebook_app_id }}";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>

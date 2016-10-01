@@ -1,0 +1,11 @@
+{{ partial('partial/article', { post: page }) }}
+
+{{ partial('widget/sharing') }}
+
+{% if page.prev or page.next %}
+    {{ partial('partial/prevnext', { post: page }) }}
+{% endif %}
+
+{% if config.disqus_shortname %}
+    {{ partial('widget/disqus') }}
+{% endif %}
