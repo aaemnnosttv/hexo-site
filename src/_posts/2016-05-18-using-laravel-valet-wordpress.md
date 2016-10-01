@@ -12,7 +12,7 @@ date: 2016-05-18 22:31:18
 
 In case you missed the release of Laravel Valet last week, allow me to introduce you.
 
-https://youtu.be/H3Z4Gk9Wc0s
+{% youtube H3Z4Gk9Wc0s %}
 
 WHAT. A. RUSH.
 
