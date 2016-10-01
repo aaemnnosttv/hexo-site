@@ -13,10 +13,13 @@
     <%- partial('_partial/head') %>
 </head>
 <body class="<%= bodyClasses() %>">
+
     <%- partial('_partial/nav') %>
+
     <main id="content">
         <%- body %>
     </main>
-    <%- partial('./_partial/footer') %>
+
+    <%- partial('_partial/footer') %>
 </body>
 </html>
