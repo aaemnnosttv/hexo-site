@@ -1,0 +1,9 @@
+<div class="container">
+<h1 class="article-title text-xs-center m-y-2">{{ post.title }}</h1>
+</div>
+
+<section class="article-meta">
+    <p class="article-date">{{ date(post.date, 'MMMM DD YYYY') }}</p>
+</section>
+
+{{ post.content }}

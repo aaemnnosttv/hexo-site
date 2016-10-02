@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.title }}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+{% if config.noindex or page.noindex %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+
+{{ open_graph() }}
+{{ feed_tag('atom.xml') }}
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+{{ css('css/main') }}
+{{ favicon_tag('/icon.ico') }}
