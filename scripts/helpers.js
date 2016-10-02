@@ -3,6 +3,18 @@ var _ = require('lodash');
 var util = require('hexo-util');
 var helper = hexo.extend.helper;
 
+helper.register('now', function() {
+    return Date.now();
+});
+
+helper.register('is_active', function(slug) {
+    var url = helper.get('url_for').call(this, slug);
+    var path = this.path;
+
+    return (url == '/' + path.replace('/index.html', ''))
+        || (url == '/.' && helper.get('is_home').call(this));
+})
+
 helper.register('bodyClasses', function() {
     var page = this.page;
 
