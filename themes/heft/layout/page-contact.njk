@@ -4,7 +4,7 @@
 
     <form action="https://formspree.io/me@aaemnnost.tv" method="POST" class="m-t-1">
         <input type="hidden" name="_subject" value="Hello from someone on your website!" />
-        <input type="hidden" name="_next" value="<%- url_for('got-it') %>" />
+        <input type="hidden" name="_next" value="{{ url_for('got-it') }}" />
 
         <div class="row">
             <div class="col-xs-12 col-sm-6">
