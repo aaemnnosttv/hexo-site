@@ -7,7 +7,8 @@ categories:
   - Announcement
 date: 2016-08-26 19:18:19
 tags:
-banner: https://i0.wp.com/aaemnnost.tv/app/uploads/2016/08/going-plaidinum.png
+banner: /images/going-plaidinum.png
+banner_align: center top
 ---
 
 The hype is real.  Today I unveiled my latest command for WP-CLI -- the `login` command.
