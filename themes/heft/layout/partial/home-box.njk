@@ -1,5 +1,8 @@
 <div class="home-box" style="max-width: none;
     background-image: url('{{ post.banner }}');
+    {% if post.banner_align -%}
+    background-position: {{ post.banner_align }};
+    {%- endif %}
 "
 >
     <div class="contained">
