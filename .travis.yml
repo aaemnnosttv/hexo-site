@@ -4,8 +4,6 @@ node_js: "6"
 
 cache: yarn
 
-install: yarn install
-
 script: hexo generate
 
 before_deploy:
