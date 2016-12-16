@@ -6,7 +6,7 @@
     "version": "3.2.2"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.4",
+    "bootstrap": "4.0.0-alpha.5",
     "font-awesome": "^4.6.3",
     "hexo": "^3.2.2",
     "hexo-autoprefixer": "^1.0.0",
