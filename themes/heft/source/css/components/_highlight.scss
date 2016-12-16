@@ -17,7 +17,10 @@ $orange: orange;
 $aqua: #0086b3;
 
 code {
-    box-shadow: inset 0 0 1px rgba($gray-light, .5);
+    white-space: nowrap;
+    color: $purple;
+    background: transparent;
+    padding: 0;
 }
 blockquote code {
     color: inherit;
