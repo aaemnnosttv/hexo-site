@@ -1,10 +1,9 @@
 ---
-title: Installing the WordPress Test Suite with Composer [Part 1]
+title: Installing the WordPress Test Suite with Composer <small>[Part&nbsp;1]</small>
 date: 2016-12-17
 categories: Articles
 tags: series, composer
 seriesIdx: 1
-# tweet_cta: tweet this, sucka
 ---
 
 Not too long ago I wrote about how to go about how to setup a Composer-based WordPress site with the core PHPUnit testing library to run integration tests.
@@ -86,11 +85,11 @@ Let's see how this might look in practice in our project's `composer.json`
             "package": {
                 "name": "aaemnnosttv/wordpress-core-phpunit-includes",
                 "type": "wordpress-tests-core",
-                "version": "4.6.1",
+                "version": "4.7",
                 "source": {
                     "type": "svn",
                     "url": "https://develop.svn.wordpress.org/",
-                    "reference": "tags/4.6.1/tests/phpunit/includes/"
+                    "reference": "tags/4.7/tests/phpunit/includes/"
                 },
                 "require": {
                     "aaemnnosttv/wordpress-tests-core-installer": "~0.1"
@@ -99,7 +98,7 @@ Let's see how this might look in practice in our project's `composer.json`
         }
     ],
     "require": {
-        "aaemnnosttv/wordpress-core-phpunit-includes": "4.6.1"
+        "aaemnnosttv/wordpress-core-phpunit-includes": "4.7"
     },
     "extra": {
         "wordpress-tests-core-dir": "tests/core"
