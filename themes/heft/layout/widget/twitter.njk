@@ -1,5 +1,5 @@
 <a class="twitter-share-button"
   data-size="large"
   data-via="aaemnnosttv"
-  href="https://twitter.com/intent/tweet?text={{ page.content | striptags | truncate(100) | urlencode }}"
+  href="https://twitter.com/intent/tweet?text={{ (page.tweet_cta if page.tweet_cta else page.title) | striptags | truncate(100) | urlencode }}"
 >Tweet</a>
