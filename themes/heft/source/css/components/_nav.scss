@@ -1,6 +1,5 @@
 .nav-primary {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
 
     .navbar-brand {
         color: $brand-primary;
@@ -9,6 +8,8 @@
     .container {
         display: flex;
         flex-direction: column;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
 
         @include media-breakpoint-up(md) {
             flex-direction: row;
