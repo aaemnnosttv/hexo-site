@@ -43,3 +43,17 @@
         }
     }
 }
+
+
+.page-nav {
+    display: flex;
+    justify-content: center;
+
+    .page-number {
+        padding: 0 .5em;
+        margin: 0 .5em;
+    }
+    .extend {
+        margin: 0 1em;
+    }
+}
