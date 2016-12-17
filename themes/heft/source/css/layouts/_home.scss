@@ -44,7 +44,6 @@
             display: block;
             color: white;
             text-shadow: -1px -1px 1px rgba(black, 0.4);
-            // border-bottom-color: silver;
             border-bottom-color: transparent;
             &:hover {
                 color: lighten($green, 30%);
@@ -55,7 +54,6 @@
         }
         .taggish {
             color: rgba(white, .5);
-            // background-color: rgba(silver, .25);
             background-color: transparent;
             border: 1px solid rgba(white, .5);
         }
