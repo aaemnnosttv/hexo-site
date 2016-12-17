@@ -46,7 +46,7 @@
             text-shadow: -1px -1px 1px rgba(black, 0.4);
             border-bottom-color: transparent;
             &:hover {
-                color: lighten($green, 30%);
+                color: $red;
             }
         }
         .date {
@@ -56,6 +56,12 @@
             color: rgba(white, .5);
             background-color: transparent;
             border: 1px solid rgba(white, .5);
+        }
+
+        &.banner-light {
+            article {
+                background-color: rgba(#111, .75);
+            }
         }
     }
     .home-box .contained {
