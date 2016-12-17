@@ -4,11 +4,14 @@ date: 2016-12-17
 categories: Articles
 tags: series, composer
 seriesIdx: 1
+
+banner: /images/sky-clouds-cloudy-mountain.jpg
+banner_lightness: light
 ---
 
-Not too long ago I wrote about how to go about how to setup a Composer-based WordPress site with the core PHPUnit testing library to run integration tests.
+Not too long ago {% post_link integration-tests-wordpress-phpunit 'I wrote about how to setup a Composer-based WordPress site with the core PHPUnit testing library to run integration tests' %}.
 
-The cornerstone of this method leverages my `wordpress-core-tests` package, which is essentially a composerified subdirectory mirror of the PHPUnit supporting files within the WordPress core develop repository.
+The cornerstone of this method leverages my `wordpress-core-tests` package, which is essentially a Composerified subdirectory mirror of the PHPUnit supporting files within the WordPress core develop repository.
 
 After maintaining it for a few months now, it became clear that my solution needed to become more robust.
 
