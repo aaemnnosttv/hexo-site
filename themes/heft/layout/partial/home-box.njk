@@ -1,9 +1,13 @@
-<div class="home-box" style="max-width: none;
-    background-image: url('{{ post.banner }}');
-    {% if post.banner_align -%}
-    background-position: {{ post.banner_align }};
-    {%- endif %}
-"
+<div class="home-box {{ 'banner-' ~ post.banner_lightness if post.banner_lightness }}"
+    style="max-width: none;
+        {%- if post.banner -%}
+        background-image: url('{{ post.banner }}');
+        {%- endif %}
+
+        {%- if post.banner_align -%}
+        background-position: {{ post.banner_align }};
+        {%- endif -%}
+    "
 >
     <div class="contained">
         {{ partial('article-row-item', { post: post }) }}
