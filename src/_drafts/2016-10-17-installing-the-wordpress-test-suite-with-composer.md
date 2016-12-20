@@ -1,6 +1,6 @@
 ---
 title: Installing the WordPress Test Suite with Composer <small>[Part&nbsp;1]</small>
-date: 2016-12-17
+date: 2016-12-20
 categories: Articles
 tags: series, composer
 seriesIdx: 1
@@ -19,15 +19,20 @@ This is a bit of a tricky problem to solve, but to wrap our heads around it, we 
 
 ## Overview
 
-- **Goal:** I want all of my PHP dependencies installed via Composer, so I can simply `composer install` and it's good to go.
-- **Problem:** The PHPUnit library used by WordPress core is generally installed using a shell script and subversion checkout.
-- **Problem:** There was no existing package available to install this with.
+- **Goal:** I want all of my PHP dependencies installed via Composer, so I can simply `composer install` and it's good to go. The WordPress core PHPUnit files are of course PHP, and should be installed via Composer as well.
+- **Problem:** The PHPUnit files used by WordPress core are generally installed using a shell script and subversion checkout.
+
+> **Note**: Installing the PHPUnit files like this makes the most sense for tests that you are writing for the core of your application and/or integration/acceptance tests where the installed version of WordPress is within your control. This method would be less practical for plugin or theme authors as those should be tested against different versions of WordPress which require different versions of the test suite files, but may still be useful for local development (ie: no need to reinstall after every reboot).
+
+## Existing Solutions
+
+There have been a few attempts by others to achieve this in different ways. Most seem to be abandoned (or at least poorly maintained) likely due to the inherent challenges in creating a solid solution to this problem.
 
 ## Solution: Create a package!
 
-**Goal:** Create a package containing the relevant subset of WordPress core that I want to be able to install via Composer.
+**Goal:** Create a package containing the relevant subset of WordPress core that which we want to be able to install via Composer.
 
-Then we can simply add the package to the `require-dev` Composer dependencies, configure the location where the suite should be installed, and we're good to go.
+Then we can simply add the package to the `require-dev` Composer dependencies, configure the location where it should be installed, and we're good to go.
 
 This is not quite as simple as it sounds.
 
@@ -76,7 +81,7 @@ Using Composer is the whole point here, so obviously that wasn't something I was
 
 The problem with my previous attempt wasn't with Composer itself, but with trying to mess with the git history by trying to add a `composer.json` file to it without breaking the history, which git is itself designed to prevent.
 
-It _is possible_ to install a package without the package source containing a `composer.json` ([exhibit A](https://wpackagist.org)). Composer needs this data, but rather than it living in its respective package, it can be defined "manually". Composer supports multiple types of [repositories](https://getcomposer.org/doc/05-repositories.md) (Composer repositories). While `vcs` is perhaps the most common for one-off packages that are not on Packagist (requires `composer.json`), you can define a `package` type repository where you essentially define a package's `composer.json` right there "inline".
+It _is possible_ to install a package without the package source containing a `composer.json` ([Exhibit A](https://wpackagist.org)). Composer needs this data, but rather than it living in its respective package, it can be defined "manually". Composer supports multiple types of [repositories](https://getcomposer.org/doc/05-repositories.md) (Composer repositories). While `vcs` is perhaps the most common for one-off packages that are not on Packagist, this is not a viable option in our case as it requires a `composer.json` in the root of the repository. You can however define a `package` type repository where you essentially define a package's `composer.json` right there "inline".
 
 Let's see how this might look in practice in our project's `composer.json`
 
@@ -115,9 +120,9 @@ The other less obvious limitation is that `package` type Composer repositories c
 
 One big advantage that this approach offers is that no mirror of the WordPress source code is necessary, if svn is an option in your environment.
 
-This is essentially the same behavior that the `install-wp-tests.sh` shell script does, which comes with wp-cli. The difference here is that Composer will run it as part of the install when necessary, rather than doing this as as a separate step of the install.
+This is essentially the same behavior that the `install-wp-tests.sh` shell script does which comes with wp-cli. The difference here is that Composer will run it as part of the install when necessary, rather than doing this as as a separate step of the install.
 
-Another disadvantage about this solution is that svn checkouts are not cached by Composer, so the test suite files will be checked out from the remote on every install. It only takes a few seconds to download, but this leaves a bitter taste in my mouth.
+Another disadvantage about this solution is that svn checkouts are not cached by Composer, so the test suite files will be checked out from the remote on every install. It only takes a few seconds to download, but this still leaves a bitter taste in my mouth.
 
 ## Red-Green-Refactor
 
