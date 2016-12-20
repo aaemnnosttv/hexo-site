@@ -9,8 +9,8 @@ $yellow: #FFCC50;
 $red: #FF645F;
 $purple: #8926CC;
 
-$code-bg: rgba(white, .75);
-$code-color: $body-color;
+// $code-bg: transparent;
+$code-color: desaturate($purple, 40);
 
 $link-color: darken($body-color, 8%);
 
