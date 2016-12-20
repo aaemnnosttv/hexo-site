@@ -5,12 +5,12 @@ html, body {
 }
 
 html {
-    @include gradient-directional(mintcream, ivory);
+    // @include gradient-directional(mintcream, ivory);
+    background-color: #ededed;
 }
 body {
     background-color: transparent;
-    @include gradient-directional(rgba(orange, .10), transparent, 200deg);
-
+    // @include gradient-directional(rgba(orange, .10), transparent, 200deg);
 
     display: flex;
     flex-direction: column;
