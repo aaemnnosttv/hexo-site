@@ -1,13 +1,13 @@
 ---
-title: Installing the WordPress Test Suite with Composer <small>[Part&nbsp;1]</small>
-date: 2016-12-20
+title: 'Installing the WordPress Test Suite with Composer <small>[Part&nbsp;1]</small>'
+tags: 'series, composer'
 categories: Articles
-tags: series, composer
 seriesIdx: 1
-
 banner: /images/sky-clouds-cloudy-mountain.jpg
 banner_lightness: light
+date: 2016-12-20 00:00:00
 ---
+
 
 Not too long ago {% post_link integration-tests-wordpress-phpunit 'I wrote about how to setup a Composer-based WordPress site with the core PHPUnit testing library to run integration tests' %}.
 
