@@ -16,6 +16,8 @@ google_analytics: UA-40536854-1
 noindex: false
 #############
 
+featured_post: installing-the-wordpress-test-suite-with-composer-part-1
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://aaemnnost.tv/

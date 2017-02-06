@@ -1,12 +1,13 @@
-{% set posts = page.posts %}
+{% set featuredPost = site.posts.findOne({slug: config.featured_post}) %}
 
-{% if is_home() %}
-    {% set posts = posts.skip(1) %}
-    {{ partial('partial/home-box', { post: page.posts.first() }) }}
+{% if is_home() and featuredPost %}
+    {{ partial('partial/home-box', { post: featuredPost }) }}
 {% endif %}
 
-{% for post in posts.toArray() %}
-    {{ partial('partial/article-row-item', { post: post }) }}
+{% for post in page.posts.toArray() %}
+    {% if post.slug != config.featured_post %}
+        {{ partial('partial/article-row-item', { post: post }) }}
+    {% endif %}
 {% endfor %}
 
 {{ partial('widget/paginator') }}
