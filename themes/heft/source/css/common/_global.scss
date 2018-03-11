@@ -43,8 +43,8 @@ img {
 }
 
 main {
-    padding-left: $spacer-x;
-    padding-right: $spacer-x;
+    padding-left: $spacer;
+    padding-right: $spacer;
 
     a {
         text-decoration: none !important;
@@ -82,15 +82,15 @@ blockquote {
 
     #content > & {
         max-width: 860px !important;
-        margin-top: ($spacer-y * 2);
-        margin-bottom: ($spacer-y * 2);
+        margin-top: ($spacer * 2);
+        margin-bottom: ($spacer * 2);
     }
 }
 
 p + h2,
 p + h3,
 p + h4 {
-    margin-top: ($spacer-y * 2);
+    margin-top: ($spacer * 2);
 }
 
 

@@ -4,7 +4,7 @@
     justify-content: space-between;
 
     @include media-breakpoint-up(md) {
-        padding: 0 ($spacer-x * 2);
+        padding: 0 ($spacer * 2);
     }
 }
 //  < PREV || NEXT >
