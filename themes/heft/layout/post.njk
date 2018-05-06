@@ -1,11 +1,13 @@
 {{ partial('partial/article', { post: page }) }}
 
-{{ partial('widget/sharing') }}
+{% if not page.canonical %}
+    {{ partial('widget/sharing') }}
+{% endif %}
 
 {% if page.prev or page.next %}
     {{ partial('partial/prevnext', { post: page }) }}
 {% endif %}
 
-{% if config.disqus_shortname %}
+{% if config.disqus_shortname and not page.canonical %}
     {{ partial('widget/disqus') }}
 {% endif %}

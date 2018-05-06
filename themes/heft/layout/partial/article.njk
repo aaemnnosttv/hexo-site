@@ -7,3 +7,9 @@
 </section>
 
 {{ post.content }}
+
+{% if page.canonical %}
+    <div class="my-3 text-muted font-italic">
+        Originally published at <a href="{{ post.canonical.href }}">{{ post.canonical.source }}</a>
+    </div>
+{% endif %}
