@@ -3,13 +3,13 @@
 </div>
 
 <section class="article-meta mb-5">
-    <p class="article-date">{{ date(post.date, 'MMMM DD YYYY') }}</p>
+    <p class="article-date">{{ date(post.date, 'MMMM Do YYYY') }}</p>
 </section>
-
-{{ post.content }}
 
 {% if page.canonical %}
     <div class="my-3 text-muted font-italic">
         Originally published at <a href="{{ post.canonical.href }}">{{ post.canonical.source }}</a>
     </div>
 {% endif %}
+
+{{ post.content }}
