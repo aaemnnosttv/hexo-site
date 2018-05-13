@@ -1,5 +1,5 @@
 ---
-title: 'WordPress Security Fundamentals: How to Not Get Hacked'
+title: WordPress Security Fundamentals
 date: 2017-10-24 10:03:38
 categories:
   - Articles
