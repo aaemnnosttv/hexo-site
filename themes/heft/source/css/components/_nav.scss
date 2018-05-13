@@ -1,26 +1,36 @@
-.nav-primary {
-    padding: 0;
+nav.primary {
+    flex-shrink: 0; // body is flex-column
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 
-    .navbar-brand {
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+
+        .items { margin-left: auto; }
+    }
+
+    .brand {
         color: $brand-primary;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        text-decoration: none;
     }
 
-    .container {
+    .items {
         display: flex;
-        flex-direction: column;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-
-        @include media-breakpoint-up(md) {
-            flex-direction: row;
-
-            .nav { margin-left: auto; }
-        }
     }
 
-    .nav-item {
+    .items a {
+        display: inline-block;
         position: relative;
-        // border-bottom: 2px solid transparent;
+        text-decoration: none;
+        padding-top: .425rem;
+        padding-bottom: .425rem;
 
         &:after {
             position: absolute;
@@ -38,8 +48,11 @@
 
         &.active:after {
             transform: none;
-            // border-bottom-color: rgba($purple, .5);
             border-bottom: 2px solid $purple;
+        }
+
+        + a {
+            margin-left: $spacer;
         }
     }
 }

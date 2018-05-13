@@ -1,24 +1,16 @@
-<nav class="nav-primary navbar navbar-full">
+<nav class="primary container">
+    <a class="brand" href="/">
+        {{ config.title }}
+        <small class="text-muted" title="It's just the letters of my name in alphabetical order.">@aaemnnosttv</small>
+    </a>
 
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            {{ config.title }}
-            <small class="text-muted" title="It's just the letters of my name in alphabetical order.">@aaemnnosttv</small>
-        </a>
+    <div class="items">
+        {% for slug, text in config.nav_primary %}
+            <a class="{{ active if is_active(slug) }}" href="{{ url_for(slug) }}/">{{ text }}</a>
+        {% endfor %}
 
-        <ul class="nav navbar-nav">
-            {% for slug, text in config.nav_primary %}
-            <li class="nav-item local {{ active if is_active(slug) }}">
-                <a class="nav-link" href="{{ url_for(slug) }}/">{{ text }}</a>
-            </li>
-            {% endfor %}
-
-            {% for network, url in config.network %}
-            <li class="nav-item social">
-                {{ link_to(url, network, { class: "nav-link", external: true }) }}
-            </li>
-            {% endfor %}
-        </ul>
-
+        {% for network, url in config.network %}
+            {{ link_to(url, network, { class: "social", external: true }) }}
+        {% endfor %}
     </div>
 </nav>

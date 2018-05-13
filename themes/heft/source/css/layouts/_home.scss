@@ -1,9 +1,8 @@
 
 .home {
-    .nav-primary {
-        height: 0;
-        padding: 0;
-        overflow: visible;
+    nav.primary {
+        margin-bottom: -64px;
+        z-index: 10;
     }
     main {
         padding-left: 0;
