@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "3.3.9"
+    "version": "3.7.1"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.5",
+    "bootstrap": "^4.0.0",
     "font-awesome": "^4.6.3",
-    "hexo": "^3.3.7",
+    "hexo": "^3.5.0",
     "hexo-autoprefixer": "^1.0.0",
     "hexo-deployer-git": "^0.2.0",
     "hexo-generator-archive": "^0.1.4",
@@ -21,7 +21,11 @@
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-nunjucks": "^1.0.5",
-    "hexo-renderer-sass": "^0.2.0",
-    "hexo-server": "^0.2.0"
+    "hexo-renderer-sass": "^0.3.2",
+    "hexo-server": "^0.3.1"
+  },
+  "scripts": {
+    "serve": "hexo serve",
+    "build": "hexo generate -f"
   }
 }

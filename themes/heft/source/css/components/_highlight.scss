@@ -10,11 +10,15 @@ $foreground: #ccc;
 $plain: #333;
 $comment: #969896;
 
-$magenta: #a71d5d; // "function"
-$lavendar: #795da3; // function name
-$navy: #183691;
+$magenta: #d73a49; // "function"
+$lavendar: #6f42c1; // function name
+$blue: #005cc5;
+$navy: #005cc5;
 $orange: orange;
 $aqua: #0086b3;
+
+$gray-lighter: $gray-200;
+$gray-dark: $gray-800;
 
 code {
     white-space: nowrap;
@@ -24,7 +28,7 @@ blockquote code {
 }
 
 .highlight {
-    margin: ($spacer-y * 2) auto;
+    margin: ($spacer * 2) auto;
     padding: 0.5em 0;
     // width: 100%;
 
@@ -39,6 +43,10 @@ blockquote code {
 
     pre {
         margin: auto;
+    }
+
+    a {
+        color: inherit;
     }
 
     .code {
@@ -128,7 +136,14 @@ blockquote code {
         color: $aqua;
     }
 
-
+    &.diff {
+        .deletion {
+            color: $red;
+        }
+        .addition {
+            color: $green;
+        }
+    }
 
     .javascript .function {
         color: $purple;

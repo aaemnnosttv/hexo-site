@@ -1,9 +1,15 @@
 <div class="container">
-<h1 class="article-title text-xs-center my-2">{{ post.title }}</h1>
+    <h1 class="h2 article-title text-center mt-5 mb-3">{{ post.title }}</h1>
 </div>
 
-<section class="article-meta">
-    <p class="article-date">{{ date(post.date, 'MMMM DD YYYY') }}</p>
+<section class="article-meta mb-5">
+    <p class="article-date">{{ date(post.date, 'MMMM Do YYYY') }}</p>
 </section>
+
+{% if page.canonical %}
+    <div class="my-3 text-muted font-italic">
+        Originally published at <a href="{{ post.canonical.href }}">{{ post.canonical.source }}</a>
+    </div>
+{% endif %}
 
 {{ post.content }}

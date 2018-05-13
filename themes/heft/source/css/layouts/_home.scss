@@ -1,16 +1,15 @@
 
 .home {
-    .nav-primary {
-        height: 0;
-        padding: 0;
-        overflow: visible;
+    nav.primary {
+        margin-bottom: -64px;
+        z-index: 10;
     }
     main {
         padding-left: 0;
         padding-right: 0;
     }
     article {
-        margin: ($spacer-y * 2) auto;
+        margin: ($spacer * 2) auto;
     }
     .article-title {
         line-height: 1.4em;
