@@ -1,12 +1,13 @@
 ---
 title: 'Installing the WordPress Test Suite with Composer <small>[Part&nbsp;2]</small>'
-tags: series, composer
+tags: 'series, composer'
 categories: Articles
 seriesIdx: 2
 banner: /images/sunny-mountain-crest.jpeg
 banner_lightness: light
-date: 2018-05-06 00:00:00
+date: 2018-07-08 23:00:00
 ---
+
 
 ~~Not too long ago~~ About a year and a half ago, {% post_link installing-the-wordpress-test-suite-with-composer-part-1 'I wrote about the challenges involved in installing the WordPress core PHPUnit test library via Composer' %}. This turned out to be much less trivial than it seems at first glance.
 
@@ -175,7 +176,7 @@ include dirname(__DIR__) . '/vendor/aaemnnosttv/wp-phpunit-lib/includes/bootstra
 
 Now the bootstrap will fail because it will be looking for a `wp-tests-config.php` file as a sibling of the `includes` directory (or several directories higher, as is used by WP core).
 
-What if the package shipped with **its own** `wp-tests-config.php` file? This would satisfy the requirement, but we still need this to be flexible enough to put our own custom configuration in it. To solve this, we need to understand that this file has already done its job, to exist where it is expected, and to be loaded. The configuration it does (with one exception) can literally be done in any other file as it is mostly just defining a few constants.
+What if the package shipped with **its own** `wp-tests-config.php` file? This would satisfy the requirement, but we still need this to be flexible enough to put our own custom configuration in it. To solve this, we need to understand that this file has already done its job: to exist where it is expected, and to be loaded. The configuration it does (with one exception) can literally be done in any other file as it is mostly just defining a few constants.
 
 One solution to this might be to use the sample `wp-tests-config.php` and populate it with some other constants/variables we set somewhere else. This isn't a very good option in my opinion because it would require generating dynamically somehow to ensure it would be futureproof with possible new required constants or settings.
 
@@ -189,6 +190,7 @@ require REAL_WP_TESTS_CONFIG_FILE;
 
 Then we can define the path to this in our `phpunit.xml`
 
+<div class="wide">
 ```xml
 <phpunit>
     <!-- ... -->
@@ -200,6 +202,7 @@ Then we can define the path to this in our `phpunit.xml`
     <!-- ... -->
 </phpunit>
 ```
+</div>
 
 I won't go into the full contents of the "real config file", but we can assume it is a properly configured version of the [sample config file](https://github.com/WordPress/wordpress-develop/raw/master/wp-tests-config-sample.php).
 
@@ -225,8 +228,8 @@ Expected, right? However, this shows that in the previous step that the constant
 Now, before you lose your grip on reality completely, don't worry because there is a logical explanation for this!
 
 As part of the test environment bootstrap, in `includes/bootstrap.php`, there is this line:
-<div class="wide">
 
+<div class="wide">
 ```php
 system( WP_PHP_BINARY . ' ' . escapeshellarg( dirname( __FILE__ ) . '/install.php' ) . ' ' . escapeshellarg( $config_file_path ) . ' ' . $multisite, $retval );
 ```
@@ -238,7 +241,7 @@ We need to define the location to the real tests config file in a way that can s
 
 To solve this, we need to stop thinking about this as a PHP script, and more like a _shell script_ since it's essentially calling `install.php` as a shell script, just written in PHP.
 
-In a shell script, we know that if we want to persist a variable/setting between seperate command processes, all we need to do is `export` the variable to make it available to all new processes in the current scope.
+In a shell script, we know that if we want to persist a variable/setting between separate command processes, all we need to do is `export` the variable to make it available to all new processes in the current scope.
 
 E.g.
 
