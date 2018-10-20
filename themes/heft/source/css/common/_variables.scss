@@ -1,19 +1,18 @@
-
 $enable-flex: true;
 $font-size-root: 19px;
 $body-color: #47525d;
 
-$blue: #2366CC;
-$green: #02E058;
-$yellow: #FFCC50;
-$red: #FF645F;
-$purple: #8926CC;
+$blue: #2366cc;
+$green: #02e058;
+$yellow: #ffcc50;
+$red: #ff645f;
+$purple: #8926cc;
 
 // $code-bg: transparent;
 $code-color: desaturate($purple, 40);
 
 $link-color: darken($body-color, 8%);
 
-$font-family-sans-serif: "Source Sans Pro", sans-serif;
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
 
 $brand-primary: $red;

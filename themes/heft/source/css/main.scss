@@ -1,18 +1,17 @@
+@import 'common/variables';
 
-@import "common/variables";
+@import 'node_modules/bootstrap/scss/bootstrap';
 
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'common/mixins';
+@import 'common/utils';
+@import 'common/global';
 
-@import "common/mixins";
-@import "common/utils";
-@import "common/global";
+@import 'components/highlight';
+@import 'components/embeds';
+@import 'components/forms';
+@import 'components/nav';
+@import 'components/sharing';
 
-@import "components/highlight";
-@import "components/embeds";
-@import "components/forms";
-@import "components/nav";
-@import "components/sharing";
-
-@import "layouts/home";
-@import "layouts/pages";
-@import "layouts/posts";
+@import 'layouts/home';
+@import 'layouts/pages';
+@import 'layouts/posts';
