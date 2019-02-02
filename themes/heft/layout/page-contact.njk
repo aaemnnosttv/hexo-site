@@ -19,10 +19,13 @@
             <textarea name="message" rows="7" class="form-control" placeholder="What sayest thee?"></textarea>
         </div>
         <div class="form-group">
-            <div style="display: none;">
+            <div data-netlify-recaptcha="true"></div>
+            <div style="position: fixed; z-index: -10; width: 1px; height: 1px; overflow: hidden;">
                 <input type="text" name="challenge">
             </div>
-            <input class="btn btn-primary btn-block mx-auto" style="max-width: 50%;" type="submit" value="Send">
+            <div class="mx-auto" style="width: 50%; min-width: 15em;">
+                <input class="btn btn-primary btn-block mx-auto" type="submit" value="Send">
+            </div>
         </div>
     </form>
 
