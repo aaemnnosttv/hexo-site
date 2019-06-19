@@ -8,12 +8,13 @@
 <meta name="robots" content="noindex, nofollow">
 {% endif %}
 
+<meta name="google-site-verification" content="Wy3-3PNndSVFSM1pUpQ5eUsm0hbO3Q-YzaTQrC59wxE" />
+
 {{ open_graph() }}
 {{ feed_tag('atom.xml') }}
 
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 
 <link rel="canonical" href="{% if page.canonical.href %}{{ page.canonical.href }}{% else %}{{ page.link }}{% endif %}">
-
 {{ css('css/main') }}
 {{ favicon_tag('/icon.ico') }}
