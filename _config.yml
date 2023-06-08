@@ -10,8 +10,6 @@ author: Evan Mattson
 language:
 timezone:
 
-google_analytics: UA-40536854-1
-
 # Search Engine indexing
 noindex: false
 #############
